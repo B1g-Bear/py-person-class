@@ -8,7 +8,10 @@ class Person:
 
 
 def create_person_list(people_data: list[dict]) -> list[Person]:
-    persons = [Person(person_data["name"], person_data["age"]) for person_data in people_data]
+    persons = [
+        Person(person_data["name"], person_data["age"])
+        for person_data in people_data
+    ]
 
     for person_data in people_data:
         person = Person.people[person_data["name"]]
